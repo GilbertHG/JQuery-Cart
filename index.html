@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./src/styles/style.css">
+
+    <link rel="icon" href="./src/images/analogic-logo.png" type="image/png">
+    <title>Analogic.shop</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav>
+            <a href="#">
+                <img src="./src/images/analogic-shop-logo.png" alt="analogic.shop logo" class="logo-nav">
+            </a>
+            <button class="button button-nav shadow" onclick="openNav()">
+                <span class="material-icons icon-nav">shopping_cart</span>
+                <span class="button-badge shadow total-item">3</span>
+            </button>
+        </nav>
+
+        <div class="item-details">
+            <div class="item-description">
+                <h1 class="item-name">Analogic Shirt Sky Blue</h1>
+                <p class="item-price price">100.000</p>
+                    <button class="button item-button add-item" data-name="Analogic Shirt Sky Blue" data-price="100" data-img="./src/images/clothes/analogic-skyblue.png">Add To Cart</button>
+            </div>
+            <img src="./src/images/clothes/analogic-skyblue.png" alt="picture of a clothes" class="item-image">
+            <ul class="item-variant">
+                <li>
+                    <a href="#" class="button variant-button">
+                        <span class="material-icons icon-variant" style="color: #FFFFFF">lens</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="button variant-button selected">
+                        <span class="material-icons icon-variant" style="color: #277BE0">lens</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list-items">
+            <div class="item glow">
+                <div class="item-pic">
+                    <img src="./src/images/clothes/analogic-white.png" alt="picture of a clothes" class="item-img">
+                </div>
+                <div class="item-desc">
+                        <button class="button-item add-item" data-name="Analogic White" data-price="85" data-img="./src/images/clothes/analogic-white.png">
+                            <span class="material-icons">add</span>
+                        </button>
+                    <p class="name">Analogic White</p>
+                    <p class="price">85.000</p>
+                    <p class="desc">1 Color</p>
+                </div>
+            </div>
+            <div class="item glow">
+                <div class="item-pic">
+                    <img src="./src/images/clothes/kofte-front.png" alt="picture of a clothes" class="item-img">
+                </div>
+                <div class="item-desc">
+                        <button class="button-item add-item" data-name="KOFTTE Shirt Black" data-price="85" data-img="./src/images/clothes/kofte-front.png">
+                            <span class="material-icons">add</span>
+                        </button>
+                    <p class="name">KOFTTE Shirt</p>
+                    <p class="price">85.000</p>
+                    <p class="desc">1 Color</p>
+                </div>
+            </div>
+            <div class="item glow">
+                <div class="item-pic">
+                    <img src="./src/images/clothes/satire-baju-bluenavy.png" alt="picture of a clothes"
+                        class="item-img">
+                </div>
+                <div class="item-desc">
+                        <button class="button-item add-item" data-name="Sarcastic? Shirt Biru Navy" data-price="80" data-img="./src/images/clothes/satire-baju-bluenavy.png">
+                            <span class="material-icons">add</span>
+                        </button>
+                    <p class="name">Satire Shirt</p>
+                    <p class="price">80.000</p>
+                    <p class="desc">3 Color</p>
+                </div>
+            </div>
+            <div class="item glow">
+                <div class="item-pic">
+                    <img src="./src/images/clothes/satire-baju-black.png" alt="picture of a clothes"
+                        class="item-img">
+                </div>
+                <div class="item-desc">
+                        <button class="button-item add-item" data-name="Sarcastic? Shirt Black" data-price="80" data-img="./src/images/clothes/satire-baju-black.png">
+                            <span class="material-icons">add</span>
+                        </button>
+                    <p class="name">Satire Shirt</p>
+                    <p class="price">80.000</p>
+                    <p class="desc">3 Color</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="cart" class="cart">
+        
+    </div>
+
+    <script src="./src/ui/main.js"></script>
+    <script src="./src/jquery-3.5.0.min.js"></script>
+    <script src="./src/ui/cart.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#cart').cartComponent();
+        });
+    </script>
+</body>
+
+</html>
